@@ -1,0 +1,16 @@
+[[source]]
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[[source]]
+url = "http://dnguyen-private-pypi.s3-website.eu-central-1.amazonaws.com/"
+verify_ssl = false
+name = "private-s3"
+
+[packages]
+flask = "==1.1.1"
+example_pkg_dnguyen = {version="==0.1.0", index="private-s3"}
+
+[requires]
+python_version = "3.7"
